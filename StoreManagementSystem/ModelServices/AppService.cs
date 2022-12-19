@@ -116,7 +116,7 @@ public class AppService
 
     public async Task SetProductIncludesAsync(ProductViewModel viewModel)
     {
-        var category = await _productRepository.GetAsync(viewModel.CategoryId);
+        var category = await _categoryRepository.GetAsync(viewModel.CategoryId);
 
         var categoryViewModel = category.Adapt<CategoryViewModel>();
 

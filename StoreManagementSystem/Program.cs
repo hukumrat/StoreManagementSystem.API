@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore;
 using StoreManagementSystem.Data.Abstract;
 using StoreManagementSystem.Data.Concrete;
 using StoreManagementSystem.ModelServices;
@@ -23,6 +25,7 @@ builder.Services.AddScoped<StoreRepository>(x => new StoreRepository("Stores"));
 builder.Services.AddScoped<WalletRepository>(x => new WalletRepository("Wallets"));
 builder.Services.AddScoped<AppService>();
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

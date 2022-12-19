@@ -13,6 +13,6 @@ public class SaleRepository : GenericRepository<Sale>
     {
         using var connection = CreateConnection();
 
-        return await connection.QueryAsync<Wallet>($"select * from Wallets where ProductId=@ProductId", new { ProductId = productId }) as IList<Wallet>;
+        return await connection.QueryAsync<Wallet>($"select * from Sales where ProductId=@ProductId", new { ProductId = productId }) as IList<Wallet>;
     }
 }
