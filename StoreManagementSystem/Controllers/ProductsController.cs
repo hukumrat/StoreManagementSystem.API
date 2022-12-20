@@ -33,6 +33,14 @@ public class ProductsController : ControllerBase
         return Ok(entityViewModels);
     }
 
+    [HttpGet("GetAllWithPhotos")]
+    public async Task<IActionResult> GetAllWithPhotos()
+    {
+        var entityViewModels = await _productRepository.GetAllProductsWithPhotos();
+
+        return Ok(entityViewModels);
+    }
+    
     [HttpGet("{id:int}")]
     public async Task<IActionResult> Get(int id)
     {
