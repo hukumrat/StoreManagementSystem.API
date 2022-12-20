@@ -9,12 +9,12 @@ namespace StoreManagementSystem.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class PhotoController : ControllerBase
+public class PhotosController : ControllerBase
 {
     private readonly PhotoRepository _photoRepository;
     private readonly AppService _appService;
 
-    public PhotoController(PhotoRepository photoRepository,
+    public PhotosController(PhotoRepository photoRepository,
         AppService appService)
     {
         _photoRepository = photoRepository;

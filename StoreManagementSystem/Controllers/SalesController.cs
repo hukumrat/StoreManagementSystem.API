@@ -9,12 +9,12 @@ namespace StoreManagementSystem.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class SaleController : ControllerBase
+public class SalesController : ControllerBase
 {
     private readonly SaleRepository _saleRepository;
     private readonly AppService _appService;
 
-    public SaleController(SaleRepository saleRepository,
+    public SalesController(SaleRepository saleRepository,
         AppService appService)
     {
         _saleRepository = saleRepository;

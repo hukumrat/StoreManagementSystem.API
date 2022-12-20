@@ -9,12 +9,12 @@ namespace StoreManagementSystem.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class WalletController : ControllerBase
+public class WalletsController : ControllerBase
 {
     private readonly WalletRepository _walletRepository;
     private readonly AppService _appService;
 
-    public WalletController(WalletRepository walletRepository,
+    public WalletsController(WalletRepository walletRepository,
         AppService appService)
     {
         _walletRepository = walletRepository;

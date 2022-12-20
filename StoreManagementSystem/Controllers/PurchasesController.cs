@@ -9,12 +9,12 @@ namespace StoreManagementSystem.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class PurchaseController : ControllerBase
+public class PurchasesController : ControllerBase
 {
     private readonly PurchaseRepository _purchaseRepository;
     private readonly AppService _appService;
 
-    public PurchaseController(PurchaseRepository purchaseRepository,
+    public PurchasesController(PurchaseRepository purchaseRepository,
         AppService appService)
     {
         _purchaseRepository = purchaseRepository;

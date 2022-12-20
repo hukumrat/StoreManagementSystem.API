@@ -9,12 +9,12 @@ namespace StoreManagementSystem.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ProductController : ControllerBase
+public class ProductsController : ControllerBase
 {
     private readonly ProductRepository _productRepository;
     private readonly AppService _appService;
 
-    public ProductController(ProductRepository productRepository,
+    public ProductsController(ProductRepository productRepository,
         AppService appService)
     {
         _productRepository = productRepository;
