@@ -44,6 +44,14 @@ public class StoresController : ControllerBase
 
         return Ok(entityViewModel);
     }
+    
+    [HttpGet("GetAllWithCityNames")]
+    public async Task<IActionResult> GetAllWithCityNames()
+    {
+        var entityViewModels = await _storeRepository.GetAllStoresWithCityNames();
+
+        return Ok(entityViewModels);
+    }
 
     [HttpPost("{cityId:int}")]
     public async Task<IActionResult> Post(int cityId, StoreAddViewModel model)

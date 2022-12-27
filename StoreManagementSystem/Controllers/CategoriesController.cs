@@ -45,6 +45,14 @@ public class CategoriesController : ControllerBase
 
         return Ok(entityViewModel);
     }
+    
+    [HttpGet("GetAllWithStoreAndCity")]
+    public async Task<IActionResult> GetAllWithStoreAndCity()
+    {
+        var entityViewModels = await _categoryRepository.GetAllWithStoreAndCity();
+
+        return Ok(entityViewModels);
+    }
 
     [HttpPost("{storeId:int}")]
     public async Task<IActionResult> Post(int storeId, CategoryAddViewModel model)
