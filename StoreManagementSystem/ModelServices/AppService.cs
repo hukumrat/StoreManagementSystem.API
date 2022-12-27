@@ -223,7 +223,7 @@ public class AppService
         
         foreach (var purchase in purchases) await DeletePurchaseByIdAsync(purchase.Id);
         
-        var sales = await _purchaseRepository.GetAllByProductIdAsync(id);
+        var sales = await _saleRepository.GetAllByProductIdAsync(id);
         
         foreach (var sale in sales) await DeleteSaleByIdAsync(sale.Id);
         
