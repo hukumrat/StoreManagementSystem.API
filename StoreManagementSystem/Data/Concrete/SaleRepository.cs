@@ -9,10 +9,10 @@ public class SaleRepository : GenericRepository<Sale>
     {
     }
 
-    public async Task<IList<Wallet>> GetAllByProductIdAsync(int productId)
+    public async Task<IList<Sale>> GetAllByProductIdAsync(int productId)
     {
         using var connection = CreateConnection();
 
-        return await connection.QueryAsync<Wallet>($"select * from Sales where ProductId=@ProductId", new { ProductId = productId }) as IList<Wallet>;
+        return await connection.QueryAsync<Sale>($"select * from Sales where ProductId=@ProductId", new { ProductId = productId }) as IList<Sale>;
     }
 }
